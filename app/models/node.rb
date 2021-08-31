@@ -5,6 +5,6 @@ class Node < ApplicationRecord
   has_many :left_connections, class_name: 'Connection', foreign_key: 'right_id'
 
   def layer
-    raise(NotImplementedError('intended to return the node\'s layer'))
+    raise(NotImplementedError.new('intended to return the node\'s layer'))
   end
 end
