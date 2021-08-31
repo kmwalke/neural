@@ -10,7 +10,7 @@ ul.nodes {
   list-style: none;
 
   li {
-    @include rounded-corners($node-size)
+    @include rounded-corners($node-size);
 
     display: block;
     width: $node-size;

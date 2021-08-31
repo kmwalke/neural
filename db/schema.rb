@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_08_31_014238) do
 
   create_table "nodes", force: :cascade do |t|
     t.string "label"
+    t.integer "layer"
     t.decimal "value"
   end
 
