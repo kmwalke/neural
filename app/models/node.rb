@@ -4,8 +4,4 @@ class Node < ApplicationRecord
   has_many :right_connections, class_name: 'Connection', foreign_key: 'left_id'
   has_many :left_connections, class_name: 'Connection', foreign_key: 'right_id'
 
-  def find_layer
-    return 1 unless left_connections.any?
-    1 + left_connections.first.left.layer
-  end
 end
