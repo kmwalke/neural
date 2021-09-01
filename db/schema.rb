@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_08_31_014238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "connections", force: :cascade do |t|
+    t.integer "left_id"
+    t.integer "right_id"
+    t.decimal "weight", null: false
+  end
+
+  create_table "nodes", force: :cascade do |t|
+    t.string "label"
+    t.integer "layer"
+    t.decimal "value"
+  end
 
 end

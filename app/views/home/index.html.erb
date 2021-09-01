@@ -1,0 +1,10 @@
+<% @layers.each do |layer| %>
+  <ul class="nodes">
+    <% layer.each do |node| %>
+      <li class="node">
+        <span class="label"><%= node.label %></span>
+        <span class="value"><%= node.value %></span>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
