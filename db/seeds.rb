@@ -8,6 +8,6 @@
 
 3.times do |i|
   2.times do |j|
-    Node.create(value: rand(100)/100.0, layer: i)
+    Node.create(value: rand(100)/100.0, layer: i+1)
   end
 end
