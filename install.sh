@@ -1,1 +1,2 @@
-pip3 install -r requirements.txt
+python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
+

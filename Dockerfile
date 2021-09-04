@@ -12,3 +12,5 @@ WORKDIR /app
 RUN echo " \
   alias ls='ls --color=auto' \n\
   " >> ~/.bashrc
+
+RUN echo "export PATH=/root/.local/bin:${PATH}" >> /root/.bashrc
