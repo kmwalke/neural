@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        USERNAME: $USER
+        UID: ${USER_ID:-0}
+        GID: ${GROUP_ID:-0}
+        command: "./install.sh"
+    volumes:
+      - .:/app
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+
